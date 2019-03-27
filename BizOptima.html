@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ 	<meta charset="utf-8"> 
+ 	<link rel='stylesheet' type='text/css'
+href='http://fonts.googleapis.com/css?family=Montserrat'>
+    <title>BizOptima</title>
+    <style>
+      .outerlayer{
+      	position: relative;
+      	margin: auto; /** vertical center for block elements **/
+      	width: 1152px;
+      	overflow：hidden;
+      }
+
+      #banner{
+      	position: absolute;
+      	width:1152px;
+      	height: 95px;
+      }
+
+      .bannerFont1{
+      	position: absolute;
+      	font-family: Montserrat,sans-serif;
+      	color: black;
+      	font-size:14px;
+      	top:30px;
+      	margin-top: 0em;
+      	
+      }
+
+      .bannerFont2{
+
+      	position:absolute;
+      	font-family: "open Sans",sans-serif;
+      	color: rgb(202,202,202);
+      	font-size:12px;
+      	margin-top:0em;
+      	top:40px;
+      	cursor: pointer;
+      }
+
+      .bannerFont2:hover{
+      	color:black;
+      }
+
+      #lawyer{
+      	position: absolute;
+      	top:95px;
+      	background-image: url(http://csci571.com/hw/hw3/images/lawyer.jpg);
+      	background-repeat: no-repeat;
+      	background-attachment: scroll;
+      	background-position: 40% center;
+      	background-size:110%;
+      	width: 1152px;
+      	height:672px;
+      	z-index:15;
+      }
+
+      #signBlock{
+      	background-color: rgb(11,60,93);
+      	position: absolute;
+      	box-sizing: border-box;
+      	left:75px;
+      	top:230px;
+      	width: 350px;
+      	height: 403px;
+      	padding-left:40px;
+      	padding-right:40px;
+      	padding-top:50px;
+      	z-index:25; 	
+      }
+
+      .signFont{
+      	font-family: Montserrat,sans-serif;
+      	color: white;
+      	font-size:12px;
+      	margin-top:0em;
+
+      }
+
+      #signFont2{
+      	font-family: Arial,sans-serif;
+      	font-style: italic;
+      	font-size:12px;
+      	color:rgb(250,221,21);
+      }
+
+      input::-moz-placeholder{
+         color: black;
+      }
+
+      #signInput{
+      	background-color: rgb(228,234,237);
+      	border:0px;
+      	outline: none;
+        width: 270px;
+      	height:40px;
+      	position: absolute;
+      	top:225px;
+      }
+
+      #signInput:hover{
+        color: rgb(128,128,128);
+      }
+
+    
+
+      #signSubmit{
+      	background-color: rgb(250,221,21);
+      	border:0px;
+      	outline: none;
+      	top:293px;
+      	position: absolute;
+      	height: 40px;
+      	width: 148px;
+      	display: inline-block;
+      	cursor: pointer;
+      	font-family: Montserrat,sans-serif;
+      }
+
+      #signSubmit:hover{
+      	color:white;
+      	background-color: rgb(34,44,54);
+      }
+
+
+
+      p.feature{
+      	position: absolute;
+      	left:75px;
+      	top:880px;
+      	margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        font-family: Montserrat,Verdana,sans-serif;
+        font-size: 14px;
+      }
+
+      p.descrip{
+      	position: absolute;
+      	left:75px;
+      	margin-top: 3em;
+        margin-bottom: 1em;
+        margin-left: 0;
+        margin-right: 0;
+        line-height: 1.5;
+        font-family: sans-serif;
+      	font-size:12px;
+      	color:rgb(133,133,133);
+      	top:900px;
+      	width: 300px;
+
+      }
+
+      #ceoSlogan{
+      	background-color:rgb(244,244,244);
+      	width:1152px;
+      	height: 343px;
+      	position:absolute; 
+      	top:1157px;
+      	 
+      	 display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+  
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+  
+        display: -o-box;
+        -o-box-orient: vertical;
+        -o-box-pack: center;
+        -o-box-align: center;
+  
+        display: -ms-box;
+        -ms-box-orient: vertical;
+        -ms-box-pack: center;
+        -ms-box-align: center;
+  
+        display: box;
+        box-orient: vertical;
+        box-pack: center;
+        box-align: center;
+
+      }
+
+      p.slogan{
+      	/**text-align: center; **/
+      	color: black;
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size: 18px;
+      	margin-bottom:1em;
+      	margin-top:0em;
+      }
+
+      p.ceo{
+      	/**text-align: center;**/
+      	color:rgb(128,128,128);
+      	font-family: Arial,sans-serif;
+      	font-size: 12px;
+      	font-weight:normal;
+      	margin-top: 0em;
+      }
+
+
+
+      .glasses{
+      	/**top:343px;**/
+        background-position: center;
+	      background-repeat: no-repeat;
+	      background-attachment: fixed;
+	      background-size: 150%; 
+	      background-image: url(http://csci571.com/hw/hw3/images/glasses.png);
+	      filter:grayscale(100%);	    
+        height: 767px;
+	      z-index:10;
+      }
+
+      div.glassesContent{
+      	position: absolute;
+      	background-color: rgba(248,248,248,0.8);
+      	top:0px;
+      	left:0px;
+      	height: 767px;
+      	width:1152px;
+      	z-index:20;
+      	text-align: center;
+      	padding-top:60px;
+      	box-sizing: border-box;
+      }
+
+      #price{
+      	color: black;
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:18px;
+      	margin-bottom:0em;
+        margin-top:0em;
+      }
+      #affordable{
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:12px;
+      	color:rgb(128,128,128);
+      	margin-top:1em;
+      }
+
+      .grid{
+      	position: absolute;
+      	width:307px;
+      	height:492px;
+      	left:75px;
+      	top:196px;
+      	background-image: url(http://csci571.com/hw/hw3/images/grid.png);
+      	background-color: rgba(248,248,248,0.85);
+      	background-size:150%;
+      	background-blend-mode: color-dodge;
+      	padding-top:60px;
+      	box-sizing: border-box;
+      	text-align: center;
+        z-index:30;
+      }
+
+      .gridContent{
+        position: absolute;
+        width:307px;
+        height:492px;
+        left:75px;
+        top:196px;
+
+        background-color: rgba(248，248，248，0.85)；
+
+        padding-top:55px;
+        box-sizing: border-box;
+        text-align: center;
+        z-index: 40;
+      }
+  
+      .fontPlan{
+      	color: black;
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:14px;
+      	margin-bottom:2em;
+        margin-top:0em;
+      }
+
+      .fontPlanFeature{
+      	color: rgb(85,85,85);
+      	font-family: Montserrat,sans-serif;
+      	font-size:12px;
+      	margin-bottom: 1.5em;
+      	margin-top:1.5em;
+      	
+      }
+
+      .fontPlanPrice{
+      	
+      	font-family: Arial;
+      	font-size:24px;
+      	margin-top: 2.2em;
+      }
+
+      .buttonBuy{
+
+      	width:132px;
+      	height:  52px;
+      	
+      	border:0px;
+      	outline:none;
+      	text-align: center;
+        display: inline-block; 
+        cursor: pointer;
+
+        background-color: rgb(11,60,93);
+        color:white;
+        font-size: 14px;
+        font-family: Montserrat,Verdana,sans-serif;
+      }
+
+      .buttonBuy:hover{
+      	background-color: rgb(35,42,50);
+      	color:white ;
+      }
+
+      .notebook{
+	      background-image: url(http://csci571.com/hw/hw3/images/notebook.jpg);
+	      background-position: center ;
+	      background-size:100%;
+	      background-repeat: no-repeat;
+	      filter: grayscale(100%);
+	      height: 450px;
+	      width:1152px;
+	      z-index:50;
+      }
+
+      .notebookContent{
+      	position: absolute;
+      	background-color: rgba(11,60,93,0.8);
+      	top:0px;
+      	left:0px;
+      	height: 450px;
+      	width:1152px;
+      	z-index:60;
+
+      	display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+  
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+  
+        display: -o-box;
+        -o-box-orient: vertical;
+        -o-box-pack: center;
+        -o-box-align: center;
+  
+        display: -ms-box;
+        -ms-box-orient: vertical;
+        -ms-box-pack: center;
+        -ms-box-align: center;
+  
+        display: box;
+        box-orient: vertical;
+        box-pack: center;
+        box-align: center;
+      }
+
+      #noteFontBig{
+      	color: white;
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:22px;
+      	margin-top:0em;
+      	margin-bottom:0.5em;
+      }
+
+      #noteFontSmall{
+      	color: white;
+      	font-family: Arial,sans-serif;
+      	font-size:12px;
+      	margin-top:0em;
+      	margin-bottom:2.5em;
+      }
+
+      .buttonTRY{
+
+      	width:166px;
+      	height: 44px;
+      	
+      	border:0px;
+      	outline:none;
+      	text-align: center;
+        display: inline-block; 
+        cursor: pointer;
+
+        background-color: rgb(250,221,21);
+        color:black;
+        font-size: 12px;
+        font-family: Montserrat,Verdana,sans-serif;
+
+      }
+
+      .buttonTRY:hover{
+      	background-color:rgb(31,41,51);
+      	color:white;
+      }
+
+      .blocktail{
+
+      	position: absolute;
+      	height: 275px;
+      	width:1152px;
+
+      	display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+  
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+  
+        display: -o-box;
+        -o-box-orient: vertical;
+        -o-box-pack: center;
+        -o-box-align: center;
+  
+        display: -ms-box;
+        -ms-box-orient: vertical;
+        -ms-box-pack: center;
+        -ms-box-align: center;
+  
+        display: box;
+        box-orient: vertical;
+        box-pack: center;
+        box-align: center;
+      }
+
+      #tailFont1{
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:14px;
+      	color: white;
+      	margin-bottom: 0.5em;
+
+      }
+
+      #tailFont2{
+      	font-family: Montserrat,Verdana,sans-serif;
+      	font-size:10px;
+      	color: rgb(177,177,177);
+      	margin-top:0.5em;
+      	margin-bottom: 1.5em;
+      }
+
+      .tailIcon{
+      	width:30px;
+      	height:30px;
+      	margin:15px;
+      }
+
+      a{
+        text-decoration: none;
+      }
+
+    </style>
+</head>
+
+ <body>
+ 	<div class="outerlayer" style="height: 1500px;">  
+        <div id="banner">
+        	
+        	<span class="bannerFont1" style="left:87px;">MENU</span>
+          
+           <a href="page2.html#aboutPara" target="_blank">
+        	<span class="bannerFont2" style="left:887px">About</span>
+          </a>
+
+          <a href="page2.html#projectPara" target="_blank">
+        	<span class="bannerFont2" style="left:945px">Projects</span>
+          </a>
+          <a href="page2.html#servicesPara" target="_blank">
+        	<span class="bannerFont2" style="left: 1010px">Services</span>
+          </a>
+        	
+        </div>
+
+ 		<div id="lawyer"></div>
+ 		<div id="signBlock"> 
+ 			<span class="signFont" style="font-size: 12px">DON'T WAIT<br>
+ 				<span class="signFont" style="font-size: 30px">IMPROVE<br>YOUR BUSINESS<br>TODAY!</span>
+ 			<br>
+ 			<p id="signFont2"> - Get your hands on Biz Optima - </p>
+ 			
+ 			<form >
+ 				<input id="signInput" type= "text" placeholder="Email" >
+ 				<input id="signSubmit" type="submit" value="SIGN UP FOR FREE!">
+ 			</form>
+ 		</div>
+
+ 		<p class="feature">AMAZING FEATURE  #1 </p>
+ 		<p class="descrip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed malesuada faucibus ex nec ultricies. Donec mattis egestas nisi non pretium. Suspendisse nec eros ut erar facilisis maximus. In congue et leo in varius. Vestibulum sit amet felis ornare,commodo orci ut, feugiat lorem.</p>
+ 		<p class="feature" style="left:425px; ">AMAZING FEATURE  #2</p>
+ 		<p class="descrip" style="left:425px">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed malesuada faucibus ex nec ultricies. Donec mattis egestas nisi non pretium. Suspendisse nec eros ut erar facilisis maximus. In congue et leo in varius. Vestibulum sit amet felis ornare,commodo orci ut, feugiat lorem.</p>
+ 		 
+ 		<p class="feature" style="left:775px;">AMAZING FEATURE  #3</p>
+ 		<p class="descrip" style="left:775px">Lorem ipsum dolor sit amet, consectetur adipisicing elit.Sed malesuada faucibus ex nec ultricies. Donec mattis egestas nisi non pretium. Suspendisse nec eros ut erar facilisis maximus. In congue et leo in varius. Vestibulum sit amet felis ornare,commodo orci ut, feugiat lorem.</p>
+
+ 		<div id="ceoSlogan">
+           <p class="slogan">"I COULDN'T HAVE ASKED FOR MORE THAN THIS. BIZ OPTIMA IS THE NEXT KILLER APP."</p>
+           <p class="ceo"> <span style="color:black;font-weight:bold; ">John Doe</span>, CEO & Founder, Blz Optima </p>
+ 		</div>
+ 	</div>
+
+  <div class="outerlayer" style="height: 767px;">
+    <div class="glasses"></div> 
+    <div class="glassesContent">
+    	<p id="price">PRICES</p>
+    	<p id="affordable">AFFORDABLE FOR EVERYONE </p>
+
+    	<div class="grid">
+    		<p class="fontPlan">BASIC PLAN</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #1</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #2</P>
+    		<p class="fontPlanFeature">Plan Amazing feature #3</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #4</p>
+    		<p class="fontPlanPrice">$29.99<br>Monthly</p>
+    		<button class="buttonBuy">BUY NOW </button>		
+    	</div>	
+
+    	<div class="grid" style="left:420px">
+     
+    		<p class="fontPlan">STANDARD PLAN</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #1</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #2</P>
+    		<p class="fontPlanFeature">Plan Amazing feature #3</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #4</p>
+    		<p class="fontPlanPrice">$39.99<br>Monthly</p>
+    		<button class="buttonBuy">BUY NOW </button>		
+    	</div>	
+
+    	<div class="grid" style="left:765px">
+    		<p class="fontPlan">CORPARATE PLAN</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #1</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #2</P>
+    		<p class="fontPlanFeature">Plan Amazing feature #3</p>
+    		<p class="fontPlanFeature">Plan Amazing feature #4</p>
+    		<p class="fontPlanPrice">$49.99<br>Monthly</p>
+    		<button class="buttonBuy">BUY NOW </button>		
+    	</div>
+    </div>
+  </div>
+    
+    <div class="outerlayer" style="background-color: rgb(29,37,48); height: 725px;">
+    	<div class="notebook"></div>
+    	<div  class="notebookContent">
+    		<p id="noteFontBig">TRY THE BEST APP IN THE MARKET</p>
+    		<p id="noteFontSmall">tell more why your software is amazing and why users need to sign up</p>
+    		<button class="buttonTRY">TRY IT FOR FREE </button>
+    	</div>
+
+    	<div class="blocktail">
+    		<p id="tailFont1">BIZ OPTIMA </p>
+    		<p id="tailFont2">224 Grant Ave, Redondo Beach, CA, 90278 310.555.1212 Ext.3 for Business Needs</p>
+
+    		<a href="https://www.facebook.com" target="_blank">
+    			<img class="tailIcon" src="http://csci571.com/hw/hw3/images/facebook.png"/>
+    		</a>
+
+    		<a href="https://www.twitter.com" target="_blank">
+    			<img class="tailIcon" src="http://csci571.com/hw/hw3/images/twitter.png"/>
+    		</a>
+
+    		<a href="https://www.instagram.com" target="_blank">
+    			<img class="tailIcon" src="http://csci571.com/hw/hw3/images/instagram.png"/>
+    		</a>
+
+    		<a href="https://www.youtube.com" target="_blank">
+    			<img class="tailIcon" src="http://csci571.com/hw/hw3/images/youtube.png"/>
+    		</a>
+
+    		<a href="https://www.googleplus.com" target="_blank">
+    			<img class="tailIcon" src="http://csci571.com/hw/hw3/images/googleplus.png"/>
+    		</a>
+
+    	</div>
+
+    </div>
+
+</body>
+</html>
